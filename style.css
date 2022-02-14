@@ -1,4 +1,13 @@
-/*---------variables-------------*/
+/*------------variables-------------------*/
+/*-------------- mixins --------------------*/
+/*------------- EXPEND ---------------------*/
+.messageFooter, .warning, .error, .success {
+  border: 1px solid #8C8C8C;
+  padding: 16px;
+  color: #fff;
+}
+
+/*------------------------------------------*/
 body {
   font: 100% "Space Mono", monospace;
   color: #6b7180;
@@ -9,7 +18,7 @@ body {
 }
 
 main {
-  padding: 0 1em;
+  padding: 0 16px;
 }
 
 article {
@@ -20,9 +29,9 @@ article section {
   flex-grow: 1;
   flex-basis: 45%;
   border: 1px #8C8C8C solid;
+  box-shadow: 10px 10px 15px -4px #6b7180;
   -webkit-box-shadow: 10px 10px 15px -4px #6b7180;
   -moz-box-shadow: 10px 10px 15px -4px #6b7180;
-  box-shadow: 10px 10px 15px -4px #6b7180;
   padding: 16px;
   margin: 16px;
   clear: both;
@@ -78,20 +87,15 @@ h3 {
   padding: 16px;
 }
 
-.success,
-.error,
-.warning {
-  border: 1px solid #8C8C8C;
-  padding: 16px;
-  color: #fff;
-}
-
 .success {
   background-color: green;
 }
 
 .error {
   background-color: red;
+}
+.error:hover {
+  background-color: green;
 }
 
 .warning {
