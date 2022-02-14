@@ -1,14 +1,21 @@
-/*---------variables-------------*/
+/*------------variables-------------------*/
 
-$primaryTextColor : hsl(222, 9%, 46%);
-$clearColor : #fff;
-$borderColor : #8C8C8C;
-$footerColor : #BF4080;
-$succesColor : green;
-$errorColor : red;
-$warningColor : orange;
+@import 'sassFiles/utils/utils.scss' ;
+
+/*-------------- mixins --------------------*/
+
+@import './sassFiles/utils/mixins.scss' ;
+
+/*------------- EXPEND ---------------------*/
 
 
+.messageFooter{
+    border: 1px solid $borderColor;
+    padding: $standartPadding;
+    color: $clearColor ;
+}
+
+/*------------------------------------------*/
 
 body {
     font: 100% "Space Mono", monospace;
@@ -20,7 +27,7 @@ body {
 }
 
 main {
-    padding: 0 1em;
+    padding: 0 $standartPadding;
 }
 
 article {
@@ -30,10 +37,8 @@ article {
         flex-grow: 1;
         flex-basis: 45%;
         border: 1px $borderColor solid;
-        -webkit-box-shadow: 10px 10px 15px -4px $primaryTextColor;
-        -moz-box-shadow: 10px 10px 15px -4px $primaryTextColor;
-        box-shadow: 10px 10px 15px -4px $primaryTextColor;
-        padding: 16px;
+        @include boxShadow($primaryTextColor);
+        padding: $standartPadding;
         margin: 16px;
         clear: both;
         overflow: auto;
@@ -69,9 +74,6 @@ article {
 }
 
 
-
-
-
 h1,
 h2,
 h3 {
@@ -85,30 +87,30 @@ h1 {
 h3 {
     text-align: center;
     font-size: 1.5em;
-    padding: 32px;
+    padding: $standartPadding * 2;
     margin-bottom: 0px;
 }
 
 .messages {
-    padding: 16px;
+    padding: $standartPadding;
 }
 
-.success,
-.error,
-.warning {
-    border: 1px solid $borderColor;
-    padding: 16px;
-    color: $clearColor ;
-}
+
 
 .success {
+    @extend .messageFooter;
     background-color: $succesColor;
 }
 
 .error {
+    @extend .messageFooter; 
     background-color: $errorColor;
+    &:hover{
+        background-color: $succesColor;
+    }
 }
 
 .warning {
+    @extend .messageFooter;
     background-color: $warningColor;
 }
