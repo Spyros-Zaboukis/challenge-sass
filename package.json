@@ -1,0 +1,19 @@
+{
+  "name": "challenge-sass",
+  "version": "1.0.0",
+  "description": "challenge sass becode scss project",
+  "main": "index.html",
+  "scripts": {
+    "sass": "sass --watch ./main.scss:./style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Spyros-Zaboukis/challenge-sass.git"
+  },
+  "author": "Spyros Zaboukis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Spyros-Zaboukis/challenge-sass/issues"
+  },
+  "homepage": "https://github.com/Spyros-Zaboukis/challenge-sass#readme"
+}
