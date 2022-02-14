@@ -1,0 +1,114 @@
+/*---------variables-------------*/
+
+$primaryTextColor : hsl(222, 9%, 46%);
+$clearColor : #fff;
+$borderColor : #8C8C8C;
+$footerColor : #BF4080;
+$succesColor : green;
+$errorColor : red;
+$warningColor : orange;
+
+
+
+body {
+    font: 100% "Space Mono", monospace;
+    color: $primaryTextColor;
+    margin: 0;
+    padding: 0;
+    background-color: $clearColor ;
+    overflow-x: hidden;
+}
+
+main {
+    padding: 0 1em;
+}
+
+article {
+    display: flex;
+    flex-wrap: wrap;
+    & section {
+        flex-grow: 1;
+        flex-basis: 45%;
+        border: 1px $borderColor solid;
+        -webkit-box-shadow: 10px 10px 15px -4px $primaryTextColor;
+        -moz-box-shadow: 10px 10px 15px -4px $primaryTextColor;
+        box-shadow: 10px 10px 15px -4px $primaryTextColor;
+        padding: 16px;
+        margin: 16px;
+        clear: both;
+        overflow: auto;
+        box-sizing: border-box;
+        &#selling-points {
+            flex-grow: 2;
+            flex-basis: 100%;
+        }
+    }
+    & code {
+        background: #000;
+        border: 1px solid $primaryTextColor;
+        color: $borderColor;
+        page-break-inside: avoid;
+        font-family: monospace;
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 1.6em;
+        max-width: 100%;
+        overflow: auto;
+        padding: 1em 1.5em;
+        display: block;
+        word-wrap: break-word;
+        &.before {
+            float: left;
+            width: 40%;
+        }
+        &.after {
+            float: right;
+            width: 40%;
+        }
+    }
+}
+
+
+
+
+
+h1,
+h2,
+h3 {
+    color: $footerColor;
+}
+
+h1 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    font-size: 1.5em;
+    padding: 32px;
+    margin-bottom: 0px;
+}
+
+.messages {
+    padding: 16px;
+}
+
+.success,
+.error,
+.warning {
+    border: 1px solid $borderColor;
+    padding: 16px;
+    color: $clearColor ;
+}
+
+.success {
+    background-color: $succesColor;
+}
+
+.error {
+    background-color: $errorColor;
+}
+
+.warning {
+    background-color: $warningColor;
+}
